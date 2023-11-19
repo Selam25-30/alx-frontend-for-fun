@@ -1,0 +1,24 @@
+a {
+    text-decoration: none;
+    color: red;
+    display: inline-block;
+    position: relative;
+}
+
+a::after {
+    width: 100%;
+    position: absolute;
+    background-color: red;
+    transform: scaleX(0);
+    content: '';
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    transform-origin: bottom left;
+    transition: transform 0.4s ease-out;
+}
+
+a:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
